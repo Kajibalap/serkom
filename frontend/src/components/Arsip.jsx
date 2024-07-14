@@ -94,7 +94,8 @@ const Arsip = () => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-          <button className="relative ml-2 border-current bg-indigo-500 px-4 py-2 rounded-lg hover:bg-indigo-600">
+          <button
+          className="relative ml-2 border-current bg-indigo-500 px-4 py-2 rounded-lg hover:bg-indigo-600">
             <SearchIcon />
           </button>
         </div>
