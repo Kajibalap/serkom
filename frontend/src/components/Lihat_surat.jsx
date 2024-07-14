@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { NavLink, useNavigate, useParams } from "react-router-dom";
+import { Link, NavLink, useNavigate, useParams } from "react-router-dom";
 
 const Lihat_surat = () => {
   const { id } = useParams();
@@ -39,15 +39,15 @@ const Lihat_surat = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-300 flex items-center justify-center">
-      <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 bg-white rounded-lg shadow-lg">
+    <div className="min-h-screen bg-gray-300 flex items-center justify-center pt-5 pb-5">
+      <div className=" px-4 py-16 sm:px-6 lg:px-8 bg-white rounded-lg shadow-lg">
         <div className="mx-auto max-w-lg text-center">
           <h4 className="text-3xl font-bold text-gray-900 sm:text-4xl">
             Lihat Surat
           </h4>
         </div>
 
-        <form action="#" className="mx-auto mb-0 mt-8 max-w-md space-y-6">
+        <form action="#" className="mx-auto mb-0 mt-8 max-w-3xl space-y-6">
           <table className="w-full">
             <tbody>
               <tr>
@@ -102,13 +102,14 @@ const Lihat_surat = () => {
                 </td>
               </tr>
               <tr>
-                <td>
-                  <label className="block mb-2 ml-2 text-sm font-medium text-gray-700">
-                    File Surat (PDF)
-                  </label>
+                <td className="block mb-2 ml-2 text-sm font-medium text-gray-700">
+                File Surat (PDF)
                 </td>
-                <td>
-                  <div className="relative pl-5">
+                
+              </tr>
+            </tbody>
+          </table>
+          <div className="relative">
                     {file ? (
                       <iframe
                         src={`http://localhost:3000${file}`}
@@ -119,10 +120,6 @@ const Lihat_surat = () => {
                       <p className="text-red-500">File tidak tersedia</p>
                     )}
                   </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
           <div className="text-right">
             <NavLink to="/">
               <button
@@ -132,12 +129,15 @@ const Lihat_surat = () => {
                 Kembali
               </button>
             </NavLink>
+            <NavLink
+            to={`/arsip/edit/${id}`}>
             <button
               type="submit"
               className="inline-block rounded-lg bg-blue-500 px-4 py-2 text-sm font-medium text-white hover:bg-blue-600"
             >
-              Tambah
+              Edit
             </button>
+            </NavLink>
           </div>
         </form>
       </div>

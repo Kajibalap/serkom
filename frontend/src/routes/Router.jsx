@@ -28,7 +28,7 @@ const Router = () => {
             <Route path="/arsip/tambah_arsip" element={<Tambah_arsip/>}/>
             <Route path="/kategori/:id" element={<Edit_katergori />}/>
             <Route path="/arsip/lihat/:id" element={<Lihat_surat/>}/>
-            <Route path="/arsip/:id" element={<Edit_arsip />}/>
+            <Route path="/arsip/edit/:id" element={<Edit_arsip />}/>
           </Routes>
         </div>
       </div>

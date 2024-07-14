@@ -89,15 +89,11 @@ const Arsip = () => {
         <div className="flex justify-end mr-10">
           <input
             type="text"
-            placeholder="Cari Surat"
+            placeholder="Cari Judul Surat"
             className="w-full p-3 border border-zinc-300 rounded-md border-gray-200 shadow-sm sm:text-sm"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-          <button
-          className="relative ml-2 border-current bg-indigo-500 px-4 py-2 rounded-lg hover:bg-indigo-600">
-            <SearchIcon />
-          </button>
         </div>
       </div>
       <div className="mx-10 mt-10">
